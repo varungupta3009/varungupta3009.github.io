@@ -11,7 +11,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  transition: background 1s;
 }
 
 h1 {
@@ -19,8 +18,8 @@ h1 {
 }
 
 .cycle {
-  animation: pre-cycle 1s 1, colorchange 10s 1s infinite;
-  -webkit-animation: pre-cycle 1s 1, colorchange 10s 1s infinite;
+  animation: pre-cycle 2s 1, colorchange 60s ease-in-out 2s infinite;
+  -webkit-animation: pre-cycle 2s 1, colorchange 60s 2s ease-in-out infinite;
 }
 
 @keyframes pre-cycle
@@ -47,17 +46,4 @@ h1 {
   65%  {background: #009688;}
   85% {background: #9c27b0;}
   100% {background: #2196f3;}
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
