@@ -2,14 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,6 +11,42 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  transition: background 1s;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+.cycle {
+  animation: pre-cycle 1s 1, colorchange 10s 1s infinite;
+  -webkit-animation: pre-cycle 1s 1, colorchange 10s 1s infinite;
+}
+
+@keyframes pre-cycle
+{
+  from   {background: #212121;}
+  to {background: #2196f3;}
+}
+
+@keyframes colorchange
+{
+  0%   {background: #2196f3;}
+  25%  {background: #673ab7;}
+  45%  {background: #3f51b5;}
+  65%  {background: #009688;}
+  85% {background: #9c27b0;}
+  100% {background: #2196f3;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: #2196f3;}
+  25%  {background: #673ab7;}
+  45%  {background: #3f51b5;}
+  65%  {background: #009688;}
+  85% {background: #9c27b0;}
+  100% {background: #2196f3;}
 }
 
 .App-link {
